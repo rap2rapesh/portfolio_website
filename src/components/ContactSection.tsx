@@ -112,9 +112,7 @@ const ContactSection = () => {
                 <a href="#" className="bg-gray-800 text-white p-3 rounded-full hover:bg-gray-700 transition-colors">
                   <Github className="h-5 w-5" />
                 </a>
-                <a href="#" className="bg-blue-400 text-white p-3 rounded-full hover:bg-blue-500 transition-colors">
-                  <Twitter className="h-5 w-5" />
-                </a>
+                
               </div>
             </div>
           </div>
