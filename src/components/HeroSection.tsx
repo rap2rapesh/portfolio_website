@@ -35,17 +35,9 @@ const HeroSection = () => {
           </div>
           
           <div className="mt-8 flex flex-wrap gap-4">
-            <Button onClick={() => document.getElementById('contact')?.scrollIntoView({
-            behavior: 'smooth'
-          })} className="bg-portfolio-primary hover:bg-portfolio-primary/90 text-white px-6 py-2 rounded-lg">
-              Contact Me
-            </Button>
             
-            <Button onClick={() => document.getElementById('projects')?.scrollIntoView({
-            behavior: 'smooth'
-          })} variant="outline" className="border-portfolio-primary text-portfolio-primary hover:bg-portfolio-primary/10">
-              View Projects
-            </Button>
+            
+            
           </div>
         </div>
         
