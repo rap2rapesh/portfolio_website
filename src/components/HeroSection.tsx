@@ -30,7 +30,7 @@ const HeroSection = () => {
             text: "AI Solutions"
           }].map((item, index) => <div key={index} className="flex items-center bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm border border-gray-100">
                 <item.Icon className="w-5 h-5 text-portfolio-primary mr-2" />
-                <span className="text-sm font-medium text-gray-700">{item.text}</span>
+                <span className="font-medium text-gray-700 text-2xl">{item.text}</span>
               </div>)}
           </div>
           
