@@ -7,7 +7,7 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center justify-between relative z-10 py-[65px]">
         <div className="lg:w-1/2 mt-10 lg:mt-0 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-portfolio-dark leading-tight px-[10px]">
+          <h1 className="text-4xl md:text-5xl font-bold text-portfolio-dark leading-tight px-[10px] lg:text-6xl">
             Data Science & <span className="text-portfolio-primary px-0">AI Engineer</span>
           </h1>
           
