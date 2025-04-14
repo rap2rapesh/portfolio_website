@@ -1,19 +1,19 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, MapPin, Linkedin, Github, Twitter } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
-
 interface ContactInfoItemProps {
   icon: React.ReactNode;
   title: string;
   content: string | React.ReactNode;
 }
-
-const ContactInfoItem: React.FC<ContactInfoItemProps> = ({ icon, title, content }) => (
-  <div className="flex items-start space-x-4">
+const ContactInfoItem: React.FC<ContactInfoItemProps> = ({
+  icon,
+  title,
+  content
+}) => <div className="flex items-start space-x-4">
     <div className="bg-portfolio-primary/10 p-3 rounded-full text-portfolio-primary">
       {icon}
     </div>
@@ -21,24 +21,21 @@ const ContactInfoItem: React.FC<ContactInfoItemProps> = ({ icon, title, content 
       <h4 className="text-sm font-medium text-gray-500">{title}</h4>
       <div className="text-lg text-portfolio-dark">{content}</div>
     </div>
-  </div>
-);
-
+  </div>;
 const ContactSection = () => {
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // In a real app, you would handle form submission here
     toast({
       title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
+      description: "Thank you for your message. I'll get back to you soon."
     });
   };
-
-  return (
-    <section id="contact" className="py-20">
+  return <section id="contact" className="py-[5px]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-portfolio-dark">
@@ -61,24 +58,13 @@ const ContactSection = () => {
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                       Name
                     </label>
-                    <Input 
-                      id="name" 
-                      placeholder="Your name" 
-                      className="border-gray-300 focus:border-portfolio-primary focus:ring-portfolio-primary"
-                      required
-                    />
+                    <Input id="name" placeholder="Your name" className="border-gray-300 focus:border-portfolio-primary focus:ring-portfolio-primary" required />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                       Email
                     </label>
-                    <Input 
-                      id="email" 
-                      type="email" 
-                      placeholder="Your email" 
-                      className="border-gray-300 focus:border-portfolio-primary focus:ring-portfolio-primary"
-                      required
-                    />
+                    <Input id="email" type="email" placeholder="Your email" className="border-gray-300 focus:border-portfolio-primary focus:ring-portfolio-primary" required />
                   </div>
                 </div>
                 
@@ -86,30 +72,17 @@ const ContactSection = () => {
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
                     Subject
                   </label>
-                  <Input 
-                    id="subject" 
-                    placeholder="Message subject" 
-                    className="border-gray-300 focus:border-portfolio-primary focus:ring-portfolio-primary"
-                    required
-                  />
+                  <Input id="subject" placeholder="Message subject" className="border-gray-300 focus:border-portfolio-primary focus:ring-portfolio-primary" required />
                 </div>
                 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                     Message
                   </label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="Your message" 
-                    className="border-gray-300 focus:border-portfolio-primary focus:ring-portfolio-primary min-h-[150px]"
-                    required
-                  />
+                  <Textarea id="message" placeholder="Your message" className="border-gray-300 focus:border-portfolio-primary focus:ring-portfolio-primary min-h-[150px]" required />
                 </div>
                 
-                <Button 
-                  type="submit" 
-                  className="w-full bg-portfolio-primary hover:bg-portfolio-primary/90 text-white"
-                >
+                <Button type="submit" className="w-full bg-portfolio-primary hover:bg-portfolio-primary/90 text-white">
                   Send Message
                 </Button>
               </div>
@@ -121,23 +94,11 @@ const ContactSection = () => {
               <h3 className="text-2xl font-semibold text-portfolio-dark mb-6">Contact Information</h3>
               
               <div className="space-y-6">
-                <ContactInfoItem 
-                  icon={<Mail className="h-6 w-6" />}
-                  title="Email"
-                  content={<a href="mailto:contact@example.com" className="hover:text-portfolio-primary">contact@example.com</a>}
-                />
+                <ContactInfoItem icon={<Mail className="h-6 w-6" />} title="Email" content={<a href="mailto:contact@example.com" className="hover:text-portfolio-primary">contact@example.com</a>} />
                 
-                <ContactInfoItem 
-                  icon={<Phone className="h-6 w-6" />}
-                  title="Phone"
-                  content={<a href="tel:+1234567890" className="hover:text-portfolio-primary">+1 (234) 567-890</a>}
-                />
+                <ContactInfoItem icon={<Phone className="h-6 w-6" />} title="Phone" content={<a href="tel:+1234567890" className="hover:text-portfolio-primary">+1 (234) 567-890</a>} />
                 
-                <ContactInfoItem 
-                  icon={<MapPin className="h-6 w-6" />}
-                  title="Location"
-                  content="San Francisco, California, USA"
-                />
+                <ContactInfoItem icon={<MapPin className="h-6 w-6" />} title="Location" content="San Francisco, California, USA" />
               </div>
             </div>
             
@@ -159,8 +120,6 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
