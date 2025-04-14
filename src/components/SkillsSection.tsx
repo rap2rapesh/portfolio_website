@@ -12,7 +12,7 @@ const SkillCard: React.FC<SkillCardProps> = ({
   description
 }) => <div className="bg-white p-6 shadow-md border border-gray-100 card-hover rounded-xl px-[24px]">
     <div className="text-portfolio-primary mb-4">{icon}</div>
-    <h3 className="text-xl font-semibold mb-2 text-portfolio-dark">{title}</h3>
+    <h3 className="text-xl mb-2 text-portfolio-dark font-semibold">{title}</h3>
     <p className="text-gray-600">{description}</p>
   </div>;
 interface SkillBarProps {
@@ -89,12 +89,7 @@ const SkillsSection = () => {
           {skillCards.map((skill, index) => <SkillCard key={index} icon={skill.icon} title={skill.title} description={skill.description} />)}
         </div>
 
-        <div className="bg-white rounded-xl shadow-md p-8 border border-gray-100">
-          <h3 className="text-2xl font-semibold text-portfolio-dark mb-6">Proficiency Levels</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12">
-            {technicalSkills.map((skill, index) => <SkillBar key={index} name={skill.name} percentage={skill.percentage} />)}
-          </div>
-        </div>
+        
       </div>
     </section>;
 };
