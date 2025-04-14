@@ -75,7 +75,7 @@ const SkillsSection = () => {
     description: "Spark, Unittest, Selenium for big data processing and testing automation."
   }];
   return <section id="skills" className="bg-gray-50 my-0 py-[5px]">
-      <div className="container mx-0 px-[16px] rounded my-[7px]">
+      <div className="container mx-0 px-[16px] rounded my-0">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-portfolio-dark">
             Technical <span className="text-portfolio-primary">Skills</span>
