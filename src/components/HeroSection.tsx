@@ -7,11 +7,11 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center justify-between relative z-10 py-[65px]">
         <div className="lg:w-1/2 mt-10 lg:mt-0 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-portfolio-dark leading-tight">
-            Data Science & <span className="text-portfolio-primary">AI Engineer</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-portfolio-dark leading-tight px-[10px]">
+            Data Science & <span className="text-portfolio-primary px-0">AI Engineer</span>
           </h1>
           
-          <p className="mt-6 text-lg text-gray-600 max-w-xl">
+          <p className="mt-6 text-lg text-gray-600 max-w-xl px-[10px]">
             Transforming data into valuable insights and building intelligent solutions. Expertise in Data Science, Machine Learning, AI, and Engineering.
           </p>
           
