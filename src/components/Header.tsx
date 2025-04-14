@@ -60,7 +60,7 @@ const Header = () => {
             id: 'contact',
             label: 'Contact'
           }].map(item => <li key={item.id}>
-                <button onClick={() => scrollToSection(item.id)} className="font-normal text-5xl">
+                <button onClick={() => scrollToSection(item.id)} className="font-normal text-4xl">
                   {item.label}
                   {activeSection === item.id && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-portfolio-primary rounded-full"></span>}
                 </button>
