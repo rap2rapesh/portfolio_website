@@ -104,10 +104,7 @@ const ProjectsSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" className="border-portfolio-primary text-portfolio-primary hover:bg-portfolio-primary/10">
-            <ExternalLink className="mr-2 h-4 w-4" />
-            View All Projects
-          </Button>
+          
         </div>
       </div>
     </section>;
