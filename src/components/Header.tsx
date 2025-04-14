@@ -1,11 +1,8 @@
-
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-
 const Header = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [scrolled, setScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       // Check if page is scrolled
@@ -17,7 +14,6 @@ const Header = () => {
 
       // Find which section is currently in view
       const sections = ['hero', 'skills', 'experience', 'projects', 'contact'];
-      
       for (const sectionId of sections) {
         const section = document.getElementById(sectionId);
         if (section) {
@@ -29,13 +25,11 @@ const Header = () => {
         }
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -45,42 +39,32 @@ const Header = () => {
       });
     }
   };
-
-  return (
-    <header className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4",
-      scrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"
-    )}>
+  return <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4", scrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent")}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold text-portfolio-primary">
-          <span className="text-portfolio-dark">Portfolio</span><span className="text-portfolio-accent">.</span>
+          <span className="text-portfolio-dark"></span><span className="text-portfolio-accent">.</span>
         </div>
         
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
-            {[
-              { id: 'skills', label: 'Skills' },
-              { id: 'experience', label: 'Experience' },
-              { id: 'projects', label: 'Projects' },
-              { id: 'contact', label: 'Contact' }
-            ].map((item) => (
-              <li key={item.id}>
-                <button
-                  onClick={() => scrollToSection(item.id)}
-                  className={cn(
-                    "text-base font-medium relative px-1 py-2 transition-colors",
-                    activeSection === item.id 
-                      ? "text-portfolio-primary" 
-                      : "text-gray-600 hover:text-portfolio-primary"
-                  )}
-                >
+            {[{
+            id: 'skills',
+            label: 'Skills'
+          }, {
+            id: 'experience',
+            label: 'Experience'
+          }, {
+            id: 'projects',
+            label: 'Projects'
+          }, {
+            id: 'contact',
+            label: 'Contact'
+          }].map(item => <li key={item.id}>
+                <button onClick={() => scrollToSection(item.id)} className={cn("text-base font-medium relative px-1 py-2 transition-colors", activeSection === item.id ? "text-portfolio-primary" : "text-gray-600 hover:text-portfolio-primary")}>
                   {item.label}
-                  {activeSection === item.id && (
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-portfolio-primary rounded-full"></span>
-                  )}
+                  {activeSection === item.id && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-portfolio-primary rounded-full"></span>}
                 </button>
-              </li>
-            ))}
+              </li>)}
           </ul>
         </nav>
         
@@ -93,8 +77,6 @@ const Header = () => {
           </button>
         </div>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
