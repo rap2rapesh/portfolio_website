@@ -3,9 +3,9 @@ import { Button } from '@/components/ui/button';
 import { Database, LineChart, Cpu, GitBranch } from 'lucide-react';
 const HeroSection = () => {
   return <section id="hero" className="min-h-screen relative pt-20 hero-gradient">
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent to-blue-50 opacity-70"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent to-blue-50 opacity-70 px-0 py-0"></div>
       
-      <div className="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center justify-between relative z-10 py-[80px]">
+      <div className="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center justify-between relative z-10 py-[65px]">
         <div className="lg:w-1/2 mt-10 lg:mt-0 animate-fade-in">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-portfolio-dark leading-tight">
             Data Science & <span className="text-portfolio-primary">AI Engineer</span>
