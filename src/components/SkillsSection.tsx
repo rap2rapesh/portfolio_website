@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Progress } from '@/components/ui/progress';
-import { Database, Code, CircuitBoard, LineChart, Brain, Server, Cog, Wrench } from 'lucide-react';
+import { Database, Code, CircuitBoard, LineChart, Brain, Server, GitBranch, Terminal, Docker, Cloud } from 'lucide-react';
 
 interface SkillCardProps {
   icon: React.ReactNode;
@@ -35,43 +35,43 @@ const SkillBar: React.FC<SkillBarProps> = ({ name, percentage }) => (
 const SkillsSection = () => {
   const technicalSkills = [
     { name: "Python", percentage: 95 },
-    { name: "SQL & NoSQL Databases", percentage: 90 },
-    { name: "Machine Learning", percentage: 85 },
-    { name: "Deep Learning", percentage: 80 },
-    { name: "Data Visualization", percentage: 90 },
-    { name: "Big Data Technologies", percentage: 85 }
+    { name: "SQL", percentage: 90 },
+    { name: "Pandas & NumPy", percentage: 90 },
+    { name: "Scikit-learn", percentage: 85 },
+    { name: "Docker & Git", percentage: 85 },
+    { name: "AWS & Azure", percentage: 80 }
   ];
 
   const skillCards = [
     {
-      icon: <Database className="h-8 w-8" />,
-      title: "Data Engineering",
-      description: "Building robust data pipelines and infrastructure to collect, process and store data efficiently."
+      icon: <Code className="h-8 w-8" />,
+      title: "Languages",
+      description: "Python, SQL, Shell Scripting with a focus on data processing and manipulation."
     },
     {
-      icon: <LineChart className="h-8 w-8" />,
-      title: "Data Analysis",
-      description: "Transforming raw data into actionable insights using statistical methods and visualization."
+      icon: <Database className="h-8 w-8" />,
+      title: "Databases",
+      description: "SQL Server, PostgreSQL, MySQL for efficient data storage and retrieval."
     },
     {
       icon: <Brain className="h-8 w-8" />,
-      title: "Machine Learning",
-      description: "Developing models that can learn patterns from data and make accurate predictions."
+      title: "Libraries",
+      description: "Pandas, NumPy, Scikit-learn for data manipulation and machine learning applications."
+    },
+    {
+      icon: <Cloud className="h-8 w-8" />,
+      title: "Technologies",
+      description: "Git, Docker, Azure Databricks, AWS for version control and cloud computing solutions."
+    },
+    {
+      icon: <LineChart className="h-8 w-8" />,
+      title: "Visualization",
+      description: "Matplotlib, Seaborn for creating insightful data visualizations and reports."
     },
     {
       icon: <CircuitBoard className="h-8 w-8" />,
-      title: "Deep Learning",
-      description: "Building neural networks for complex tasks like computer vision and natural language processing."
-    },
-    {
-      icon: <Code className="h-8 w-8" />,
-      title: "Software Development",
-      description: "Creating clean, maintainable code and robust applications to deliver data products."
-    },
-    {
-      icon: <Server className="h-8 w-8" />,
-      title: "Cloud Computing",
-      description: "Leveraging cloud platforms for scalable data processing and ML model deployment."
+      title: "Frameworks",
+      description: "Spark, Unittest, Selenium for big data processing and testing automation."
     }
   ];
 
@@ -83,7 +83,7 @@ const SkillsSection = () => {
             Technical <span className="text-portfolio-primary">Skills</span>
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-            Expertise in various data science, machine learning, and software development technologies
+            Expertise in data science, engineering, and software development technologies
           </p>
         </div>
 

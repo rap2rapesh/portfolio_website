@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Github, ExternalLink, Code, Eye } from 'lucide-react';
+import { Github, ExternalLink, Code, Eye, Server, Database, Robot } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 interface ProjectCardProps {
@@ -71,50 +71,50 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Predictive Analytics Dashboard",
-      description: "Interactive dashboard for predictive analytics with real-time data visualization and ML model integration.",
+      title: "Real-Time Road Journey Pipeline",
+      description: "Designed and implemented a real-time data streaming pipeline to monitor road journeys, contributing to enhanced road safety and accident prevention.",
+      image: "https://images.unsplash.com/photo-1668876303651-0a9332febcba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      tags: ["Kafka", "Zookeeper", "PySpark", "Docker", "AWS Redshift", "Glue"],
+      demoLink: "#",
+      codeLink: "#"
+    },
+    {
+      title: "AI Agentic Medical Assistant",
+      description: "Implemented a multi-modal AI solution combining speech-to-text, vision, language and text-to-speech capabilities which was built with Groq, OpenAI, Meta LLM and Gradio.",
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      tags: ["GROQ", "OpenAI", "Gradio UI", "Meta LLM", "Python"],
+      demoLink: "#",
+      codeLink: "#"
+    },
+    {
+      title: "Data Processing Framework",
+      description: "Built a scalable data processing framework that handles large volumes of data with efficient ETL processes and data quality checks.",
+      image: "https://images.unsplash.com/photo-1599658880436-c61792e70672?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      tags: ["Python", "SQL", "Airflow", "AWS", "Docker"],
+      demoLink: "#",
+      codeLink: "#"
+    },
+    {
+      title: "Automated Testing Suite",
+      description: "Developed a comprehensive automated testing suite using Selenium and Unittest to ensure software quality and reliability.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      tags: ["Python", "React", "TensorFlow", "D3.js"],
+      tags: ["Selenium", "Unittest", "Python", "CI/CD", "GitHub Actions"],
       demoLink: "#",
       codeLink: "#"
     },
     {
-      title: "Natural Language Processing API",
-      description: "RESTful API for natural language processing tasks including sentiment analysis, entity recognition and text classification.",
-      image: "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      tags: ["Python", "Flask", "BERT", "Docker"],
+      title: "Logistics Optimization System",
+      description: "Created a system to optimize logistics operations using advanced algorithms and data-driven decision making.",
+      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      tags: ["Python", "Optimization Algorithms", "Pandas", "Matplotlib"],
       demoLink: "#",
       codeLink: "#"
     },
     {
-      title: "Computer Vision Image Classifier",
-      description: "Deep learning model for image classification with transfer learning and custom architecture optimization.",
-      image: "https://images.unsplash.com/photo-1526378800651-c32d170fe6f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      tags: ["PyTorch", "CNN", "Transfer Learning"],
-      demoLink: "#",
-      codeLink: "#"
-    },
-    {
-      title: "Data Pipeline Orchestration",
-      description: "Automated ETL workflow orchestration system with data validation and monitoring capabilities.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      tags: ["Airflow", "Spark", "AWS", "MongoDB"],
-      demoLink: "#",
-      codeLink: "#"
-    },
-    {
-      title: "Recommendation Engine",
-      description: "Collaborative filtering recommendation system with real-time personalization and A/B testing framework.",
-      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      tags: ["Python", "Neo4j", "Redis", "FastAPI"],
-      demoLink: "#",
-      codeLink: "#"
-    },
-    {
-      title: "Time Series Forecasting",
-      description: "Advanced time series forecasting model for financial data with anomaly detection capabilities.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      tags: ["Prophet", "LSTM", "Pandas", "Plotly"],
+      title: "Database Migration Tool",
+      description: "Built a tool to facilitate seamless migration between different database systems while preserving data integrity.",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2068&q=80",
+      tags: ["SQL", "PostgreSQL", "MySQL", "SQL Server", "Python"],
       demoLink: "#",
       codeLink: "#"
     }
@@ -128,7 +128,7 @@ const ProjectsSection = () => {
             Featured <span className="text-portfolio-primary">Projects</span>
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-            A selection of my recent work in data science, machine learning, and software development
+            A selection of my recent work in data engineering, AI, and software development
           </p>
         </div>
 

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
-import { BriefcaseBusiness, Calendar, Building2 } from 'lucide-react';
+import { BriefcaseBusiness, Calendar, Building2, Award, GraduationCap } from 'lucide-react';
 
 interface TimelineItemProps {
   year: string;
@@ -23,7 +23,10 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
   <div className="relative pl-10 pb-10">
     {!isLast && <div className="timeline-line z-10"></div>}
     <div className="absolute left-0 w-6 h-6 rounded-full bg-portfolio-primary text-white flex items-center justify-center z-20">
-      <BriefcaseBusiness className="w-3 h-3" />
+      {title.includes("Engineer") || title.includes("Solution") ? 
+        <BriefcaseBusiness className="w-3 h-3" /> : 
+        <GraduationCap className="w-3 h-3" />
+      }
     </div>
     <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 ml-6 card-hover">
       <div className="flex items-center text-gray-500 mb-2">
@@ -50,32 +53,32 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
 const ExperienceSection = () => {
   const experiences = [
     {
+      year: "2024 - Present",
+      title: "Diploma Program",
+      company: "IIT Madras",
+      description: "Currently pursuing advanced studies in data science and related technologies at the prestigious Indian Institute of Technology, Madras.",
+      skills: ["Data Science", "Machine Learning", "Advanced Analytics"]
+    },
+    {
       year: "2022 - Present",
-      title: "Senior Data Scientist",
-      company: "TechInnovate AI",
-      description: "Leading a team of data scientists to develop and deploy machine learning models for predictive analytics. Architected end-to-end ML pipelines and implemented data-driven solutions for enterprise clients.",
-      skills: ["Python", "TensorFlow", "AWS", "MLOps", "Team Leadership"]
+      title: "Associate Data Engineer",
+      company: "Circulants",
+      description: "Working on data engineering solutions and received a Spot Award for a development project that featured rigorous unit testing.",
+      skills: ["Python", "SQL", "Data Engineering", "Unit Testing"]
     },
     {
-      year: "2020 - 2022",
-      title: "Machine Learning Engineer",
-      company: "DataCraft Solutions",
-      description: "Designed and implemented machine learning models to solve complex business problems. Optimized data processing pipelines and collaborated with cross-functional teams to integrate ML solutions.",
-      skills: ["PyTorch", "Scikit-learn", "Docker", "Kubernetes", "SQL"]
+      year: "2021 - 2022",
+      title: "Solution Design Graduate",
+      company: "Avvashya CCI Logistics Ltd",
+      description: "Designed and implemented logistics solutions, optimizing supply chain processes and improving operational efficiency.",
+      skills: ["Solution Design", "Logistics", "Data Analysis"]
     },
     {
-      year: "2018 - 2020",
-      title: "Data Engineer",
-      company: "Quantum Analytics",
-      description: "Built scalable data infrastructure and ETL pipelines. Created data models and implemented data quality processes. Collaborated with data scientists to prepare datasets for model training.",
-      skills: ["Spark", "Hadoop", "Airflow", "MongoDB", "PostgreSQL"]
-    },
-    {
-      year: "2016 - 2018",
-      title: "Software Developer",
-      company: "CodeSphere Innovations",
-      description: "Developed and maintained backend services and RESTful APIs. Implemented data processing algorithms and collaborated with UI/UX teams for interactive data visualizations.",
-      skills: ["Java", "Spring Boot", "REST APIs", "Git", "Agile"]
+      year: "2017 - 2021",
+      title: "Bachelor of Engineering",
+      company: "University",
+      description: "Completed Bachelor of Engineering with focus on technical foundations and engineering principles.",
+      skills: ["Engineering", "Technical Studies", "Problem Solving"]
     }
   ];
 
@@ -87,7 +90,7 @@ const ExperienceSection = () => {
             Professional <span className="text-portfolio-primary">Experience</span>
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-            A timeline of my professional journey in the field of data science and software engineering
+            My educational background and professional journey in data engineering and software development
           </p>
         </div>
 
