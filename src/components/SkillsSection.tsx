@@ -10,7 +10,7 @@ const SkillCard: React.FC<SkillCardProps> = ({
   icon,
   title,
   description
-}) => <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 card-hover">
+}) => <div className="bg-white p-6 shadow-md border border-gray-100 card-hover rounded-xl px-[24px]">
     <div className="text-portfolio-primary mb-4">{icon}</div>
     <h3 className="text-xl font-semibold mb-2 text-portfolio-dark">{title}</h3>
     <p className="text-gray-600">{description}</p>
@@ -80,7 +80,7 @@ const SkillsSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-portfolio-dark">
             Technical <span className="text-portfolio-primary">Skills</span>
           </h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto my-0">
+          <p className="mt-4 text-gray-600 max-w-2xl mx-auto my-px">
             Expertise in data science, engineering, and software development technologies
           </p>
         </div>
