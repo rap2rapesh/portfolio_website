@@ -60,7 +60,7 @@ const Header = () => {
             id: 'contact',
             label: 'Contact'
           }].map(item => <li key={item.id}>
-                <button onClick={() => scrollToSection(item.id)} className={cn("text-base font-medium relative px-1 py-2 transition-colors", activeSection === item.id ? "text-portfolio-primary" : "text-gray-600 hover:text-portfolio-primary")}>
+                <button onClick={() => scrollToSection(item.id)} className="font-normal text-5xl">
                   {item.label}
                   {activeSection === item.id && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-portfolio-primary rounded-full"></span>}
                 </button>
