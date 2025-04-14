@@ -32,10 +32,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
       
       <div className="flex space-x-3">
-        {demoLink && <Button variant="outline" size="sm" className="flex items-center space-x-1 border-portfolio-primary text-portfolio-primary hover:bg-portfolio-primary/10">
-            <Eye className="h-4 w-4" />
-            <span>Live Demo</span>
-          </Button>}
+        {demoLink}
         
         {codeLink && <Button variant="outline" size="sm" className="flex items-center space-x-1 border-gray-300 text-gray-700 hover:bg-gray-100">
             <Github className="h-4 w-4" />
