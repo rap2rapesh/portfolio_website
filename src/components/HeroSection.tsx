@@ -61,7 +61,7 @@ const HeroSection = () => {
             </div>
             
             {/* Speech Bubble */}
-            <div className="absolute -top-16 -right-4 md:right-0 bg-white/90 backdrop-blur-sm p-4 shadow-lg transition-all duration-300 ease-in-out max-w-[220px] py-0 rounded-none mx-0 my-0 px-0">
+            <div className="absolute -top-16 -right-4 md:right-0 bg-white/90 backdrop-blur-sm p-4 shadow-lg transition-all duration-300 ease-in-out max-w-[220px] py-0 rounded-none my-0 px-0 mx-[65px]">
               <div className="relative">
                 <p className="text-gray-700 transition-opacity duration-300 font-bold my-0 px-0 text-xl mx-px">{speechMessage}</p>
                 {/* Speech bubble tail/pointer */}
