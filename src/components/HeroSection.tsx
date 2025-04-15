@@ -1,25 +1,19 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Database, LineChart, Cpu, GitBranch } from 'lucide-react';
 import { navSpeechMessages } from './Header';
-
 const HeroSection = () => {
   const [speechMessage, setSpeechMessage] = useState(navSpeechMessages.default);
-  
   useEffect(() => {
     // Listen for speech message events from the Header component
     const handleSpeechMessage = (event: CustomEvent<string>) => {
       setSpeechMessage(event.detail);
     };
-    
     window.addEventListener('speech-message', handleSpeechMessage as EventListener);
-    
     return () => {
       window.removeEventListener('speech-message', handleSpeechMessage as EventListener);
     };
   }, []);
-  
   return <section id="hero" className="min-h-screen relative pt-20 hero-gradient">
       <div className="absolute inset-0 bg-gradient-to-br from-transparent to-blue-50 opacity-70 px-0 py-0"></div>
       
@@ -67,9 +61,9 @@ const HeroSection = () => {
             </div>
             
             {/* Speech Bubble */}
-            <div className="absolute -top-16 -right-4 md:right-0 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg transition-all duration-300 ease-in-out max-w-[220px]">
+            <div className="absolute -top-16 -right-4 md:right-0 bg-white/90 backdrop-blur-sm p-4 shadow-lg transition-all duration-300 ease-in-out max-w-[220px] rounded-3xl">
               <div className="relative">
-                <p className="text-gray-700 font-medium text-sm transition-opacity duration-300">{speechMessage}</p>
+                <p className="text-gray-700 transition-opacity duration-300 font-bold text-base">{speechMessage}</p>
                 {/* Speech bubble tail/pointer */}
                 <div className="absolute bottom-[-16px] right-8 w-4 h-4 bg-white/90 backdrop-blur-sm transform rotate-45 shadow-lg"></div>
               </div>
