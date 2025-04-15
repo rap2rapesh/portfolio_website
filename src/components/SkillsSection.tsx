@@ -1,24 +1,39 @@
+
 import React from 'react';
 import { Progress } from '@/components/ui/progress';
+import { Badge } from '@/components/ui/badge';
 import { Database, Code, CircuitBoard, LineChart, Brain, Server, GitBranch, Terminal, Dock, Cloud } from 'lucide-react';
+
 interface SkillCardProps {
   icon: React.ReactNode;
   title: string;
-  description: string;
+  skills: string[];
 }
+
 const SkillCard: React.FC<SkillCardProps> = ({
   icon,
   title,
-  description
+  skills
 }) => <div className="bg-white p-6 shadow-md border border-gray-100 card-hover rounded-xl px-[24px]">
     <div className="text-portfolio-primary mb-4">{icon}</div>
-    <h3 className="text-xl mb-2 text-portfolio-dark font-semibold">{title}</h3>
-    <p className="text-gray-600">{description}</p>
+    <h3 className="text-xl mb-4 text-portfolio-dark font-semibold">{title}</h3>
+    <div className="flex flex-wrap gap-2 justify-center">
+      {skills.map((skill, index) => (
+        <Badge 
+          key={index}
+          className="bg-gray-100 hover:bg-portfolio-primary hover:text-white text-gray-700 py-1 px-3 text-xs rounded-full transition-colors"
+        >
+          {skill}
+        </Badge>
+      ))}
+    </div>
   </div>;
+
 interface SkillBarProps {
   name: string;
   percentage: number;
 }
+
 const SkillBar: React.FC<SkillBarProps> = ({
   name,
   percentage
@@ -29,6 +44,7 @@ const SkillBar: React.FC<SkillBarProps> = ({
     </div>
     <Progress value={percentage} className="h-2" />
   </div>;
+
 const SkillsSection = () => {
   const technicalSkills = [{
     name: "Python",
@@ -49,31 +65,33 @@ const SkillsSection = () => {
     name: "AWS & Azure",
     percentage: 80
   }];
+
   const skillCards = [{
     icon: <Code className="h-8 w-8" />,
     title: "Languages",
-    description: "Python, SQL, Shell Scripting with a focus on data processing and manipulation."
+    skills: ["Python", "SQL", "Shell Scripting", "R", "JavaScript"]
   }, {
     icon: <Database className="h-8 w-8" />,
     title: "Databases",
-    description: "SQL Server, PostgreSQL, MySQL for efficient data storage and retrieval."
+    skills: ["SQL Server", "PostgreSQL", "MySQL", "MongoDB", "Oracle"]
   }, {
     icon: <Brain className="h-8 w-8" />,
     title: "Libraries",
-    description: "Pandas, NumPy, Scikit-learn for data manipulation and machine learning applications."
+    skills: ["Pandas", "NumPy", "Scikit-learn", "TensorFlow", "PyTorch", "Keras"]
   }, {
     icon: <Cloud className="h-8 w-8" />,
     title: "Technologies",
-    description: "Git, Docker, Azure Databricks, AWS for version control and cloud computing solutions."
+    skills: ["Git", "Docker", "Azure Databricks", "AWS", "Kubernetes", "CI/CD"]
   }, {
     icon: <LineChart className="h-8 w-8" />,
     title: "Visualization",
-    description: "Matplotlib, Seaborn for creating insightful data visualizations and reports."
+    skills: ["Matplotlib", "Seaborn", "Plotly", "Tableau", "Power BI", "D3.js"]
   }, {
     icon: <CircuitBoard className="h-8 w-8" />,
     title: "Frameworks",
-    description: "Spark, Unittest, Selenium for big data processing and testing automation."
+    skills: ["Spark", "Unittest", "Selenium", "Flask", "Django", "FastAPI"]
   }];
+
   return <section id="skills" className="bg-gray-50 my-0 py-[5px]">
       <div className="container mx-0 px-[16px] rounded my-0">
         <div className="text-center mb-16">
@@ -86,11 +104,10 @@ const SkillsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {skillCards.map((skill, index) => <SkillCard key={index} icon={skill.icon} title={skill.title} description={skill.description} />)}
+          {skillCards.map((skill, index) => <SkillCard key={index} icon={skill.icon} title={skill.title} skills={skill.skills} />)}
         </div>
-
-        
       </div>
     </section>;
 };
+
 export default SkillsSection;
