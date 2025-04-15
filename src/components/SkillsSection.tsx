@@ -69,27 +69,27 @@ const SkillsSection = () => {
   const skillCards = [{
     icon: <Code className="h-8 w-8" />,
     title: "Languages",
-    skills: ["Python", "SQL", "Shell Scripting", "R", "JavaScript"]
+    skills: ["Python", "SQL", "Shell Scripting"]
   }, {
     icon: <Database className="h-8 w-8" />,
     title: "Databases",
-    skills: ["SQL Server", "PostgreSQL", "MySQL", "MongoDB", "Oracle"]
+    skills: ["SQL Server", "PostgreSQL", "MySQL"]
   }, {
     icon: <Brain className="h-8 w-8" />,
     title: "Libraries",
-    skills: ["Pandas", "NumPy", "Scikit-learn", "TensorFlow", "PyTorch", "Keras"]
+    skills: ["Pandas", "NumPy", "Scikit-learn"]
   }, {
     icon: <Cloud className="h-8 w-8" />,
     title: "Technologies",
-    skills: ["Git", "Docker", "Azure Databricks", "AWS", "Kubernetes", "CI/CD"]
+    skills: ["Git", "Docker", "Azure Databricks", "AWS"]
   }, {
     icon: <LineChart className="h-8 w-8" />,
     title: "Visualization",
-    skills: ["Matplotlib", "Seaborn", "Plotly", "Tableau", "Power BI", "D3.js"]
+    skills: ["Matplotlib", "Seaborn", "Plotly"]
   }, {
     icon: <CircuitBoard className="h-8 w-8" />,
     title: "Frameworks",
-    skills: ["Spark", "Unittest", "Selenium", "Flask", "Django", "FastAPI"]
+    skills: ["Spark", "Unittest", "Selenium"]
   }];
 
   return <section id="skills" className="bg-gray-50 my-0 py-[5px]">
