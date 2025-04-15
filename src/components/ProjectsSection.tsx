@@ -31,7 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </Badge>)}
       </div>
       
-      <div className="flex space-x-0">
+      <div className="flex space-x-0 mx-[85px]">
         {demoLink}
         
         {codeLink && <Button variant="outline" size="sm" className="flex items-center space-x-1 border-gray-300 text-gray-700 hover:bg-gray-100">
