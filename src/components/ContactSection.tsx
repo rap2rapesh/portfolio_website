@@ -78,8 +78,8 @@ const ContactSection = () => {
             <div className="bg-white rounded-xl shadow-md p-4 border border-gray-100">
               <h3 className="text-lg font-semibold text-portfolio-dark mb-3">Connect with Me</h3>
               
-              <div className="flex space-x-3 py-[50px] mx-[10px] px-[100px]">
-                <a href="#" className="bg-portfolio-primary text-white p-2 rounded-full hover:bg-portfolio-primary/90 transition-colors py-[8px]">
+              <div className="flex space-x-3 py-[50px] mx-[10px] px-[100px] rounded-3xl">
+                <a href="#" className="bg-portfolio-primary text-white p-2 rounded-full hover:bg-portfolio-primary/100 transition-colors py-[8px]">
                   <Linkedin className="h-4 w-4" />
                 </a>
                 <a href="#" className="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 transition-colors">
