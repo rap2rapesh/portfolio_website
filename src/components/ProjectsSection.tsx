@@ -42,13 +42,13 @@ const ProjectsSection = () => {
   const projects = [{
     title: "Real-Time Road Journey Pipeline",
     description: "Designed and implemented a real-time data streaming pipeline to monitor road journeys, contributing to enhanced road safety and accident prevention.",
-    image: "https://private-user-images.githubusercontent.com/168437985/327924567-f6757c8a-2ab9-463e-81c8-60962c299a60.JPG?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDQ3MjAxMDYsIm5iZiI6MTc0NDcxOTgwNiwicGF0aCI6Ii8xNjg0Mzc5ODUvMzI3OTI0NTY3LWY2NzU3YzhhLTJhYjktNDYzZS04MWM4LTYwOTYyYzI5OWE2MC5KUEc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDE1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQxNVQxMjIzMjZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02MTIyOTUwMjBiZjM0ZWQ2NmQ5NTQ4NzEzZTk0M2I3YWQ5N2E2YTNhODQzMjZjYmNkYmZmMGNlYmM5OTcyMDc0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Sy0MbbSG3WrQt-1HqTVHUVUW0BUUH715pwm1RDmdQtI",
+    image: "https://5.imimg.com/data5/ANDROID/Default/2021/5/QU/MP/VU/19587890/product-jpeg.jpg",
     tags: ["Kafka", "Zookeeper", "PySpark", "Docker", "AWS Redshift", "Glue"],
     codeLink: "https://github.com/TylerDurden786/Rush_Hour"
   }, {
     title: "AI Agentic Medical Assistant",
     description: "Implemented a multi-modal AI solution combining speech-to-text, vision, language and text-to-speech capabilities which was built with Groq, OpenAI, Meta LLM and Gradio.",
-    image: "https://github.com/TylerDurden786/ai_medical_assistant/raw/main/flowchart.JPG",
+    image: "https://img.freepik.com/free-vector/hand-drawn-ai-healthcare-illustration_52683-156475.jpg?semt=ais_hybrid&w=740",
     tags: ["GROQ", "OpenAI", "Gradio UI", "Meta LLM", "Python"],
     codeLink: "https://github.com/TylerDurden786/ai_medical_assistant"
   }];
