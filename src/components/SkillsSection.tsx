@@ -79,7 +79,7 @@ const SkillsSection = () => {
     title: "Frameworks",
     skills: ["Spark", "Unittest", "Selenium"]
   }];
-  return <section id="skills" className="bg-gray-50 my-0 py-[50px]">
+  return <section id="skills" className="bg-gray-50 my-0 py-0">
       <div className="container mx-0 px-[16px] rounded my-0">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-portfolio-dark py-[30px]">
