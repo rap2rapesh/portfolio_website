@@ -1,15 +1,12 @@
-
 import React from 'react';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { Database, Code, CircuitBoard, LineChart, Brain, Server, GitBranch, Terminal, Dock, Cloud } from 'lucide-react';
-
 interface SkillCardProps {
   icon: React.ReactNode;
   title: string;
   skills: string[];
 }
-
 const SkillCard: React.FC<SkillCardProps> = ({
   icon,
   title,
@@ -18,22 +15,15 @@ const SkillCard: React.FC<SkillCardProps> = ({
     <div className="text-portfolio-primary mb-4">{icon}</div>
     <h3 className="text-xl mb-4 text-portfolio-dark font-semibold">{title}</h3>
     <div className="flex flex-wrap gap-2 justify-center">
-      {skills.map((skill, index) => (
-        <Badge 
-          key={index}
-          className="bg-gray-100 hover:bg-portfolio-primary hover:text-white text-gray-700 py-1 px-3 text-xs rounded-full transition-colors"
-        >
+      {skills.map((skill, index) => <Badge key={index} className="bg-gray-100 hover:bg-portfolio-primary hover:text-white text-gray-700 py-1 px-3 text-xs rounded-full transition-colors">
           {skill}
-        </Badge>
-      ))}
+        </Badge>)}
     </div>
   </div>;
-
 interface SkillBarProps {
   name: string;
   percentage: number;
 }
-
 const SkillBar: React.FC<SkillBarProps> = ({
   name,
   percentage
@@ -44,7 +34,6 @@ const SkillBar: React.FC<SkillBarProps> = ({
     </div>
     <Progress value={percentage} className="h-2" />
   </div>;
-
 const SkillsSection = () => {
   const technicalSkills = [{
     name: "Python",
@@ -65,7 +54,6 @@ const SkillsSection = () => {
     name: "AWS & Azure",
     percentage: 80
   }];
-
   const skillCards = [{
     icon: <Code className="h-8 w-8" />,
     title: "Languages",
@@ -91,16 +79,13 @@ const SkillsSection = () => {
     title: "Frameworks",
     skills: ["Spark", "Unittest", "Selenium"]
   }];
-
   return <section id="skills" className="bg-gray-50 my-0 py-[5px]">
       <div className="container mx-0 px-[16px] rounded my-0">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-portfolio-dark">
             Technical <span className="text-portfolio-primary">Skills</span>
           </h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto my-px">
-            Expertise in data science, engineering, and software development technologies
-          </p>
+          
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -109,5 +94,4 @@ const SkillsSection = () => {
       </div>
     </section>;
 };
-
 export default SkillsSection;
