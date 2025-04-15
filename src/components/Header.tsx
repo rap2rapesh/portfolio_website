@@ -4,8 +4,8 @@ import { cn } from '@/lib/utils';
 // Define speech messages for navigation items
 export const navSpeechMessages = {
   default: "Welcome, have a look around.",
-  skills: "Oh yes, please explore the skills.",
-  experience: "The experience is my strength.",
+  skills: "Please do explore my skills.",
+  experience: "My Experience strengthened me.",
   projects: "Wanna see some cool stuff I've built?",
   contact: "Let's get in touch!"
 };
