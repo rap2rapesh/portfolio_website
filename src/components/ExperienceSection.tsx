@@ -71,9 +71,7 @@ const ExperienceSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-portfolio-dark">
             Professional <span className="text-portfolio-primary">Experience</span>
           </h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-            My educational background and professional journey in data engineering and software development
-          </p>
+          
         </div>
 
         <div className="max-w-3xl mx-auto">
