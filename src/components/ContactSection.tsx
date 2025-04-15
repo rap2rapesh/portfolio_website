@@ -41,14 +41,11 @@ const ContactSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-portfolio-dark">
             Get In <span className="text-portfolio-primary">Touch</span>
           </h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-            Have a project in mind or want to discuss collaboration opportunities? 
-            I'd love to hear from you!
-          </p>
+          
         </div>
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="bg-white rounded-xl shadow-md p-8 border border-gray-100">
+          <div className="bg-white rounded-xl shadow-md p-8 border border-gray-100 py-[16px]">
             <h3 className="text-2xl font-semibold text-portfolio-dark mb-6">Send a Message</h3>
             
             <form onSubmit={handleSubmit}>
@@ -90,7 +87,7 @@ const ContactSection = () => {
           </div>
           
           <div>
-            <div className="bg-white rounded-xl shadow-md p-8 border border-gray-100 mb-8">
+            <div className="bg-white rounded-xl shadow-md p-8 border border-gray-100 mb-8 py-[16px]">
               <h3 className="text-2xl font-semibold text-portfolio-dark mb-6">Contact Information</h3>
               
               <div className="space-y-6">
@@ -102,7 +99,7 @@ const ContactSection = () => {
               </div>
             </div>
             
-            <div className="bg-white rounded-xl shadow-md p-8 border border-gray-100">
+            <div className="bg-white rounded-xl shadow-md p-8 border border-gray-100 py-[16px]">
               <h3 className="text-2xl font-semibold text-portfolio-dark mb-6">Connect with Me</h3>
               
               <div className="flex space-x-4">
