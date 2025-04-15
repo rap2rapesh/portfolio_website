@@ -1,24 +1,46 @@
+
 import React from 'react';
 import { Progress } from '@/components/ui/progress';
 import { Database, Code, CircuitBoard, LineChart, Brain, Server, GitBranch, Terminal, Dock, Cloud } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
+
 interface SkillCardProps {
   icon: React.ReactNode;
   title: string;
   description: string;
+  items: string[];
 }
+
 const SkillCard: React.FC<SkillCardProps> = ({
   icon,
   title,
-  description
-}) => <div className="bg-white p-6 shadow-md border border-gray-100 card-hover rounded-xl px-[24px]">
+  description,
+  items
+}) => (
+  <div className="bg-white p-6 shadow-md border border-gray-100 card-hover rounded-xl px-[24px]">
     <div className="text-portfolio-primary mb-4">{icon}</div>
     <h3 className="text-xl mb-2 text-portfolio-dark font-semibold">{title}</h3>
-    <p className="text-gray-600">{description}</p>
-  </div>;
+    <p className="text-gray-600 mb-4">{description}</p>
+    <div className="flex flex-wrap gap-2 mt-2">
+      {items.map((item, idx) => (
+        <Badge 
+          key={idx} 
+          variant="outline" 
+          className="bg-portfolio-primary bg-opacity-10 text-portfolio-primary border-portfolio-primary px-3 py-1 rounded-full"
+        >
+          {item}
+        </Badge>
+      ))}
+    </div>
+  </div>
+);
+
 interface SkillBarProps {
   name: string;
   percentage: number;
 }
+
 const SkillBar: React.FC<SkillBarProps> = ({
   name,
   percentage
@@ -29,6 +51,7 @@ const SkillBar: React.FC<SkillBarProps> = ({
     </div>
     <Progress value={percentage} className="h-2" />
   </div>;
+
 const SkillsSection = () => {
   const technicalSkills = [{
     name: "Python",
@@ -49,31 +72,39 @@ const SkillsSection = () => {
     name: "AWS & Azure",
     percentage: 80
   }];
+
   const skillCards = [{
     icon: <Code className="h-8 w-8" />,
     title: "Languages",
-    description: "Python, SQL, Shell Scripting with a focus on data processing and manipulation."
+    description: "Python, SQL, Shell Scripting with a focus on data processing and manipulation.",
+    items: ["Python", "SQL", "Shell Scripting"]
   }, {
     icon: <Database className="h-8 w-8" />,
     title: "Databases",
-    description: "SQL Server, PostgreSQL, MySQL for efficient data storage and retrieval."
+    description: "SQL Server, PostgreSQL, MySQL for efficient data storage and retrieval.",
+    items: ["SQL Server", "PostgreSQL", "MySQL"]
   }, {
     icon: <Brain className="h-8 w-8" />,
     title: "Libraries",
-    description: "Pandas, NumPy, Scikit-learn for data manipulation and machine learning applications."
+    description: "Pandas, NumPy, Scikit-learn for data manipulation and machine learning applications.",
+    items: ["Pandas", "NumPy", "Scikit-learn"]
   }, {
     icon: <Cloud className="h-8 w-8" />,
     title: "Technologies",
-    description: "Git, Docker, Azure Databricks, AWS for version control and cloud computing solutions."
+    description: "Git, Docker, Azure Databricks, AWS for version control and cloud computing solutions.",
+    items: ["Git", "Docker", "Azure Databricks", "AWS"]
   }, {
     icon: <LineChart className="h-8 w-8" />,
     title: "Visualization",
-    description: "Matplotlib, Seaborn for creating insightful data visualizations and reports."
+    description: "Matplotlib, Seaborn for creating insightful data visualizations and reports.",
+    items: ["Matplotlib", "Seaborn"]
   }, {
     icon: <CircuitBoard className="h-8 w-8" />,
     title: "Frameworks",
-    description: "Spark, Unittest, Selenium for big data processing and testing automation."
+    description: "Spark, Unittest, Selenium for big data processing and testing automation.",
+    items: ["Spark", "Unittest", "Selenium"]
   }];
+
   return <section id="skills" className="bg-gray-50 my-0 py-[5px]">
       <div className="container mx-0 px-[16px] rounded my-0">
         <div className="text-center mb-16">
@@ -86,11 +117,16 @@ const SkillsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {skillCards.map((skill, index) => <SkillCard key={index} icon={skill.icon} title={skill.title} description={skill.description} />)}
+          {skillCards.map((skill, index) => <SkillCard 
+            key={index} 
+            icon={skill.icon} 
+            title={skill.title} 
+            description={skill.description}
+            items={skill.items}
+          />)}
         </div>
-
-        
       </div>
     </section>;
 };
+
 export default SkillsSection;
