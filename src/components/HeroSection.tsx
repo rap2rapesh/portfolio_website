@@ -25,7 +25,7 @@ const HeroSection = () => {
           </h1>
           
           <p className="mt-6 text-lg text-gray-600 max-w-xl px-[10px]">
-            Transforming data into valuable insights and building intelligent solutions. Expertise in Data Science, Machine Learning, AI, and Engineering.
+            Transforming data into valuable insights and building intelligent solutions. Expertise in Data Science, Machine Learning, AI and Data Engineering.
           </p>
           
           <div className="mt-8 flex flex-wrap gap-3">
@@ -40,7 +40,7 @@ const HeroSection = () => {
             text: "Machine Learning"
           }, {
             Icon: GitBranch,
-            text: "AI Solutions"
+            text: "Artifical Intelligence"
           }].map((item, index) => <div key={index} className="flex items-center bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm border border-gray-100">
                 <item.Icon className="w-5 h-5 text-portfolio-primary mr-2" />
                 <span className="font-medium text-gray-700 text-xl">{item.text}</span>
