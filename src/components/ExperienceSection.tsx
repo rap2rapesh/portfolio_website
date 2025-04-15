@@ -62,31 +62,31 @@ const ExperienceSection = () => {
   const experiences = [
     {
       year: "2024 - Present",
-      title: "Diploma Program",
-      company: "IIT Madras",
-      description: "Currently pursuing advanced studies in data science and related technologies at the prestigious Indian Institute of Technology, Madras.",
-      skills: ["Data Science", "Machine Learning", "Advanced Analytics"]
+      title: "Diploma",
+      company: "IIT Madras | CGPA: 7.13",
+      description: "Data Science & Business Applications",
+      skills: ["Data Science", "Machine Learning", "Business Analytics"]
     },
     {
       year: "2022 - Present",
       title: "Associate Data Engineer",
       company: "Circulants",
-      description: "Working on data engineering solutions and received a Spot Award for a development project that featured rigorous unit testing.",
-      skills: ["Python", "SQL", "Data Engineering", "Unit Testing"]
+      description: "Data Pipelines with cloud services",
+      skills: ["Python", "SQL", "Spark", "AWS", "Databricks"]
     },
     {
       year: "2021 - 2022",
       title: "Solution Design Graduate",
       company: "Avvashya CCI Logistics Ltd",
-      description: "Designed and implemented logistics solutions, optimizing supply chain processes and improving operational efficiency.",
-      skills: ["Solution Design", "Logistics", "Data Analysis"]
+      description: "Data Gathering",
+      skills: ["Excel", "Data Analysis"]
     },
     {
       year: "2017 - 2021",
       title: "Bachelor of Engineering",
-      company: "University",
-      description: "Completed Bachelor of Engineering with focus on technical foundations and engineering principles.",
-      skills: ["Engineering", "Technical Studies", "Problem Solving"]
+      company: "Mumbai University | CGPA: 9.22",
+      description: "Technical foundations of engineering principles.",
+      skills: ["Mechanical", "Mathematics", "Statistics"]
     }
   ];
 
