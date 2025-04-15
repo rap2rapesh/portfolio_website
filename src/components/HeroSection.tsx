@@ -1,7 +1,25 @@
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Database, LineChart, Cpu, GitBranch } from 'lucide-react';
+import { navSpeechMessages } from './Header';
+
 const HeroSection = () => {
+  const [speechMessage, setSpeechMessage] = useState(navSpeechMessages.default);
+  
+  useEffect(() => {
+    // Listen for speech message events from the Header component
+    const handleSpeechMessage = (event: CustomEvent<string>) => {
+      setSpeechMessage(event.detail);
+    };
+    
+    window.addEventListener('speech-message', handleSpeechMessage as EventListener);
+    
+    return () => {
+      window.removeEventListener('speech-message', handleSpeechMessage as EventListener);
+    };
+  }, []);
+  
   return <section id="hero" className="min-h-screen relative pt-20 hero-gradient">
       <div className="absolute inset-0 bg-gradient-to-br from-transparent to-blue-50 opacity-70 px-0 py-0"></div>
       
@@ -46,6 +64,15 @@ const HeroSection = () => {
             <div className="absolute -inset-4 bg-gradient-to-r from-portfolio-primary to-portfolio-secondary rounded-full blur-lg opacity-20 animate-pulse-light"></div>
             <div className="relative z-10 rounded-full overflow-hidden h-72 w-72 sm:h-80 sm:w-80 border-4 border-white shadow-xl">
               <img src="/lovable-uploads/373c3925-b670-4446-bc14-e9237ff7b443.png" alt="Data Science Professional" className="object-cover w-full h-full" />
+            </div>
+            
+            {/* Speech Bubble */}
+            <div className="absolute -top-16 -right-4 md:right-0 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg transition-all duration-300 ease-in-out max-w-[220px]">
+              <div className="relative">
+                <p className="text-gray-700 font-medium text-sm transition-opacity duration-300">{speechMessage}</p>
+                {/* Speech bubble tail/pointer */}
+                <div className="absolute bottom-[-16px] right-8 w-4 h-4 bg-white/90 backdrop-blur-sm transform rotate-45 shadow-lg"></div>
+              </div>
             </div>
             
             <div className="absolute -bottom-4 -right-4 bg-white rounded-full p-3 shadow-lg animate-float">

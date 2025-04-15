@@ -1,8 +1,27 @@
+
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+
+// Define speech messages for navigation items
+export const navSpeechMessages = {
+  default: "Welcome, have a look around.",
+  skills: "Oh yes, please explore the skills.",
+  experience: "The experience is my strength.",
+  projects: "Wanna see some cool stuff I've built?",
+  contact: "Let's get in touch!"
+};
+
 const Header = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [scrolled, setScrolled] = useState(false);
+  const [currentHoverItem, setCurrentHoverItem] = useState<string | null>(null);
+  
+  // Create a global event dispatcher for speech bubble messages
+  const dispatchSpeechEvent = (message: string) => {
+    const event = new CustomEvent('speech-message', { detail: message });
+    window.dispatchEvent(event);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       // Check if page is scrolled
@@ -30,6 +49,7 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -39,6 +59,18 @@ const Header = () => {
       });
     }
   };
+
+  const handleNavHover = (itemId: string) => {
+    setCurrentHoverItem(itemId);
+    const message = navSpeechMessages[itemId as keyof typeof navSpeechMessages] || navSpeechMessages.default;
+    dispatchSpeechEvent(message);
+  };
+
+  const handleNavLeave = () => {
+    setCurrentHoverItem(null);
+    dispatchSpeechEvent(navSpeechMessages.default);
+  };
+
   return <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4", scrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent")}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold text-portfolio-primary">
@@ -60,7 +92,12 @@ const Header = () => {
             id: 'contact',
             label: 'Contact'
           }].map(item => <li key={item.id}>
-                <button onClick={() => scrollToSection(item.id)} className="font-normal text-2xl">
+                <button 
+                  onClick={() => scrollToSection(item.id)} 
+                  onMouseEnter={() => handleNavHover(item.id)}
+                  onMouseLeave={handleNavLeave}
+                  className="font-normal text-2xl relative"
+                >
                   {item.label}
                   {activeSection === item.id && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-portfolio-primary rounded-full"></span>}
                 </button>
