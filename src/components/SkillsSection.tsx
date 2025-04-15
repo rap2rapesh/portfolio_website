@@ -1,6 +1,6 @@
 import React from 'react';
 import { Progress } from '@/components/ui/progress';
-import { Database, Code, CircuitBoard, LineChart, Brain, Server, GitBranch, Terminal, Docker, Cloud } from 'lucide-react';
+import { Database, Code, CircuitBoard, LineChart, Brain, Server, GitBranch, Terminal, Dock, Cloud } from 'lucide-react';
 interface SkillCardProps {
   icon: React.ReactNode;
   title: string;
