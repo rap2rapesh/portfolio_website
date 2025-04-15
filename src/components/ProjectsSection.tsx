@@ -45,43 +45,15 @@ const ProjectsSection = () => {
   const projects = [{
     title: "Real-Time Road Journey Pipeline",
     description: "Designed and implemented a real-time data streaming pipeline to monitor road journeys, contributing to enhanced road safety and accident prevention.",
-    image: "https://images.unsplash.com/photo-1668876303651-0a9332febcba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    image: "https://private-user-images.githubusercontent.com/168437985/327924567-f6757c8a-2ab9-463e-81c8-60962c299a60.JPG?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDQ3MjAxMDYsIm5iZiI6MTc0NDcxOTgwNiwicGF0aCI6Ii8xNjg0Mzc5ODUvMzI3OTI0NTY3LWY2NzU3YzhhLTJhYjktNDYzZS04MWM4LTYwOTYyYzI5OWE2MC5KUEc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDE1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQxNVQxMjIzMjZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02MTIyOTUwMjBiZjM0ZWQ2NmQ5NTQ4NzEzZTk0M2I3YWQ5N2E2YTNhODQzMjZjYmNkYmZmMGNlYmM5OTcyMDc0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Sy0MbbSG3WrQt-1HqTVHUVUW0BUUH715pwm1RDmdQtI",
     tags: ["Kafka", "Zookeeper", "PySpark", "Docker", "AWS Redshift", "Glue"],
     demoLink: "#",
     codeLink: "#"
   }, {
     title: "AI Agentic Medical Assistant",
     description: "Implemented a multi-modal AI solution combining speech-to-text, vision, language and text-to-speech capabilities which was built with Groq, OpenAI, Meta LLM and Gradio.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    image: "https://github.com/TylerDurden786/ai_medical_assistant/raw/main/flowchart.JPG",
     tags: ["GROQ", "OpenAI", "Gradio UI", "Meta LLM", "Python"],
-    demoLink: "#",
-    codeLink: "#"
-  }, {
-    title: "Data Processing Framework",
-    description: "Built a scalable data processing framework that handles large volumes of data with efficient ETL processes and data quality checks.",
-    image: "https://images.unsplash.com/photo-1599658880436-c61792e70672?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    tags: ["Python", "SQL", "Airflow", "AWS", "Docker"],
-    demoLink: "#",
-    codeLink: "#"
-  }, {
-    title: "Automated Testing Suite",
-    description: "Developed a comprehensive automated testing suite using Selenium and Unittest to ensure software quality and reliability.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    tags: ["Selenium", "Unittest", "Python", "CI/CD", "GitHub Actions"],
-    demoLink: "#",
-    codeLink: "#"
-  }, {
-    title: "Logistics Optimization System",
-    description: "Created a system to optimize logistics operations using advanced algorithms and data-driven decision making.",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    tags: ["Python", "Optimization Algorithms", "Pandas", "Matplotlib"],
-    demoLink: "#",
-    codeLink: "#"
-  }, {
-    title: "Database Migration Tool",
-    description: "Built a tool to facilitate seamless migration between different database systems while preserving data integrity.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D&auto=format&fit=crop&w=2068&q=80",
-    tags: ["SQL", "PostgreSQL", "MySQL", "SQL Server", "Python"],
     demoLink: "#",
     codeLink: "#"
   }];
