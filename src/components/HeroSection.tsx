@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Database, LineChart, Cpu, GitBranch } from 'lucide-react';
 import { navSpeechMessages } from './Header';
+
 const HeroSection = () => {
   const [speechMessage, setSpeechMessage] = useState(navSpeechMessages.default);
   useEffect(() => {
@@ -53,19 +54,47 @@ const HeroSection = () => {
           </div>
         </div>
         
-        <div className="lg:w-2/5 flex justify-center animate-fade-in-right">
+        <div className="lg:w-2/5 flex justify-center animate-fade-in-right relative">
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-r from-portfolio-primary to-portfolio-secondary rounded-full blur-lg opacity-20 animate-pulse-light"></div>
             <div className="relative z-10 rounded-full overflow-hidden h-72 w-72 sm:h-80 sm:w-80 border-4 border-white shadow-xl">
               <img src="/lovable-uploads/373c3925-b670-4446-bc14-e9237ff7b443.png" alt="Data Science Professional" className="object-cover w-full h-full" />
             </div>
             
-            {/* Speech Bubble */}
-            <div className="absolute -top-16 -right-4 md:right-0 bg-white/90 backdrop-blur-sm p-4 shadow-lg transition-all duration-300 ease-in-out max-w-[220px] py-0 rounded-none my-0 px-0 mx-[65px]">
-              <div className="relative bg-transparent">
-                <p className="transition-opacity duration-300 font-bold my-0 px-0 mx-px text-zinc-50 text-left text-xl">{speechMessage}</p>
-                {/* Speech bubble tail/pointer */}
+            {/* Enhanced Speech Bubble */}
+            <div className="absolute -top-24 -right-16 md:right-0 
+              bg-gradient-to-br from-portfolio-primary/10 to-portfolio-secondary/10 
+              backdrop-blur-xl 
+              p-6 
+              shadow-2xl 
+              rounded-2xl 
+              border border-white/20 
+              transition-all duration-300 ease-in-out 
+              max-w-[300px] 
+              animate-float">
+              <div className="relative">
+                <p className="
+                  text-2xl 
+                  font-bold 
+                  text-portfolio-dark 
+                  tracking-tight 
+                  leading-relaxed
+                  bg-clip-text 
+                  text-transparent 
+                  bg-gradient-to-r 
+                  from-portfolio-primary 
+                  to-portfolio-secondary
+                  drop-shadow-md
+                ">
+                  {speechMessage}
+                </p>
                 
+                {/* Speech bubble pointer */}
+                <div className="absolute -bottom-4 right-4 
+                  w-0 h-0 
+                  border-l-8 border-l-transparent 
+                  border-r-8 border-r-transparent 
+                  border-t-8 border-portfolio-primary/20"></div>
               </div>
             </div>
             
@@ -87,4 +116,5 @@ const HeroSection = () => {
       </div>
     </section>;
 };
+
 export default HeroSection;
