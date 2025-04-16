@@ -80,9 +80,9 @@ const ContactSection = () => {
               
               <div className="flex space-x-3 py-[50px] mx-[10px] px-[100px] rounded-3xl">
                 <a href="#" className="bg-portfolio-primary text-white p-2 rounded-full hover:bg-portfolio-primary/100 transition-colors py-[8px]">
-                  <Linkedin className="h-4 w-4" />
+                  <Linkedin className="h-10 w-10" />
                 </a>
-                <a href="#" className="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 transition-colors">
+                <a href="#" className="bg-gray-800 text-white p-5 rounded-full hover:bg-gray-700 transition-colors">
                   <Github className="h-4 w-4" />
                 </a>
               </div>
