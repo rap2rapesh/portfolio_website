@@ -48,9 +48,9 @@ const ContactSection = () => {
 
     // EmailJS service configuration
     // Important: You need to replace these IDs with your actual EmailJS service, template, and user IDs
-    const serviceID = 'YOUR_SERVICE_ID';
-    const templateID = 'YOUR_TEMPLATE_ID';
-    const userID = 'YOUR_USER_ID';
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const userID = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     emailjs.send(serviceID, templateID, {
       from_name: formData.name,
