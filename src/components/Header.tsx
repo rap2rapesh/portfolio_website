@@ -69,7 +69,8 @@ const Header = () => {
   return <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4", scrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent")}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold text-portfolio-primary">
-          <span className="text-portfolio-accent"></span>
+{/*           <span className="text-portfolio-accent"></span> */}
+          Omkar's Portfolio
         </div>
         
         <nav className="hidden md:block">
