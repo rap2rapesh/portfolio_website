@@ -62,7 +62,7 @@ const ProjectsSection = () => {
   return <section id="projects" className="bg-gray-50 py-[5px]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-portfolio-dark py-[30px]">
+          <h2 className="text-3xl md:text-4xl font-bold text-portfolio-dark py-0 my-[40px]">
             Featured <span className="text-portfolio-primary">Projects</span>
           </h2>
           
