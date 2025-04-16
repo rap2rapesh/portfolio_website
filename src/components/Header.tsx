@@ -1,5 +1,13 @@
+
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import { Linkedin, Github } from 'lucide-react';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 // Define speech messages for navigation items
 export const navSpeechMessages = {
@@ -7,8 +15,11 @@ export const navSpeechMessages = {
   skills: "Please do explore my skills.",
   experience: "My Experience strengthened me.",
   projects: "Wanna see some cool stuff I've built?",
-  contact: "Let's get in touch!"
+  contact: "Let's get in touch!",
+  linkedin: "Check out my LinkedIn profile",
+  github: "Check out my GitHub profile"
 };
+
 const Header = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [scrolled, setScrolled] = useState(false);
@@ -21,6 +32,7 @@ const Header = () => {
     });
     window.dispatchEvent(event);
   };
+
   useEffect(() => {
     const handleScroll = () => {
       // Check if page is scrolled
@@ -48,6 +60,7 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -57,23 +70,26 @@ const Header = () => {
       });
     }
   };
+
   const handleNavHover = (itemId: string) => {
     setCurrentHoverItem(itemId);
     const message = navSpeechMessages[itemId as keyof typeof navSpeechMessages] || navSpeechMessages.default;
     dispatchSpeechEvent(message);
   };
+
   const handleNavLeave = () => {
     setCurrentHoverItem(null);
     dispatchSpeechEvent(navSpeechMessages.default);
   };
+
   return <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4", scrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent")}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-5xl font-bold text-portfolio-primary">
           Omkar's Portfolio
         </div>
         
-        <nav className="hidden md:block">
-          <ul className="flex space-x-8">
+        <nav className="hidden md:flex items-center">
+          <ul className="flex space-x-8 mr-6">
             {[{
             id: 'skills',
             label: 'Skills'
@@ -93,6 +109,49 @@ const Header = () => {
                 </button>
               </li>)}
           </ul>
+
+          {/* Social media icons */}
+          <div className="flex space-x-4">
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a 
+                    href="https://www.linkedin.com/in/omkarshende1/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onMouseEnter={() => handleNavHover('linkedin')} 
+                    onMouseLeave={handleNavLeave}
+                    className="text-portfolio-primary hover:text-portfolio-primary/80 transition-colors"
+                  >
+                    <Linkedin className="h-6 w-6" />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Check out my LinkedIn profile</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a 
+                    href="https://github.com/TylerDurden786" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onMouseEnter={() => handleNavHover('github')} 
+                    onMouseLeave={handleNavLeave}
+                    className="text-gray-800 hover:text-gray-600 transition-colors"
+                  >
+                    <Github className="h-6 w-6" />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Check out my GitHub profile</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </div>
         </nav>
         
         <div className="md:hidden">
@@ -106,4 +165,5 @@ const Header = () => {
       </div>
     </header>;
 };
+
 export default Header;
