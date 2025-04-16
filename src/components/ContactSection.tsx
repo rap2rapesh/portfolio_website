@@ -79,7 +79,7 @@ const ContactSection = () => {
               <h3 className="text-lg font-semibold text-portfolio-dark mb-3">Connect with Me</h3>
               
               <div className="flex space-x-3 py-[50px] mx-[10px] px-[100px] rounded-3xl">
-                <a href="https://www.linkedin.com/in/omkarshende1/" className="bg-portfolio-primary text-white p-2 rounded-full hover:bg-portfolio-primary/100 transition-colors py-[8px]">
+                <a href="https://www.linkedin.com/in/omkarshende1/" className="bg-portfolio-primary text-white p-2 rounded-full hover:bg-portfolio-primary/100 transition-colors px-[10px] py-[15px]">
                   <Linkedin className="h-10 w-10" />
                 </a>
                 <a href="https://github.com/TylerDurden786" className="bg-gray-800 text-white p-5 rounded-full hover:bg-gray-700 transition-colors">
