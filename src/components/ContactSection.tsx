@@ -67,11 +67,11 @@ const ContactSection = () => {
               <h3 className="text-lg font-semibold text-portfolio-dark mb-3">Contact Information</h3>
               
               <div className="space-y-3">
-                <ContactInfoItem icon={<Mail className="h-4 w-4" />} title="Email" content={<a href="mailto:contact@example.com" className="hover:text-portfolio-primary">contact@example.com</a>} />
+                <ContactInfoItem icon={<Mail className="h-4 w-4" />} title="Email" content={<a href="mailto:contact@example.com" className="hover:text-portfolio-primary">omkarshendeofficial@gmail.com</a>} />
                 
-                <ContactInfoItem icon={<Phone className="h-4 w-4" />} title="Phone" content={<a href="tel:+1234567890" className="hover:text-portfolio-primary">+1 (234) 567-890</a>} />
+                <ContactInfoItem icon={<Phone className="h-4 w-4" />} title="Phone" content={<a href="tel:+1234567890" className="hover:text-portfolio-primary">+91 9323115264</a>} />
                 
-                <ContactInfoItem icon={<MapPin className="h-4 w-4" />} title="Location" content="San Francisco, California, USA" />
+                <ContactInfoItem icon={<MapPin className="h-4 w-4" />} title="Location" content="Mumbai, India" />
               </div>
             </div>
             
@@ -79,11 +79,11 @@ const ContactSection = () => {
               <h3 className="text-lg font-semibold text-portfolio-dark mb-3">Connect with Me</h3>
               
               <div className="flex space-x-3 py-[50px] mx-[10px] px-[100px] rounded-3xl">
-                <a href="#" className="bg-portfolio-primary text-white p-2 rounded-full hover:bg-portfolio-primary/100 transition-colors py-[8px]">
+                <a href="https://www.linkedin.com/in/omkarshende1/" className="bg-portfolio-primary text-white p-2 rounded-full hover:bg-portfolio-primary/100 transition-colors py-[8px]">
                   <Linkedin className="h-10 w-10" />
                 </a>
-                <a href="#" className="bg-gray-800 text-white p-5 rounded-full hover:bg-gray-700 transition-colors">
-                  <Github className="h-4 w-4" />
+                <a href="https://github.com/TylerDurden786" className="bg-gray-800 text-white p-5 rounded-full hover:bg-gray-700 transition-colors">
+                  <Github className="h-10 w-10" />
                 </a>
               </div>
             </div>
